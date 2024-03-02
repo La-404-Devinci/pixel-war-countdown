@@ -72,9 +72,9 @@ section {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    margin-bottom: 1.5em;
     font-size: 0.8em;
     text-align: center;
+    padding-bottom: 1.5em;
 }
 
 .wait a {
