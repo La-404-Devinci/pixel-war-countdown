@@ -5,6 +5,11 @@ const countdown = setInterval(() => {
     const now = new Date().getTime();
     const distance = endDate - now;
 
+    // Reload when the timer is over
+    if (distance < 0) {
+        window.location.reload();
+    }
+
     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
