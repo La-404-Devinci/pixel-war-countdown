@@ -1,7 +1,7 @@
 // modifier heure si nécessaire
-const endDate = new Date("2024-03-15T20:00:00").getTime();
+const endDate = new Date("2024-03-22T13:00:00").getTime();
 
-const countdown = setInterval(() => {
+const refreshCountdown = () => {
     const now = new Date().getTime();
     const distance = endDate - now;
 
@@ -19,9 +19,7 @@ const countdown = setInterval(() => {
     document.getElementById("countdown").innerHTML += `<p>${hours}<span>H</span></p>`;
     document.getElementById("countdown").innerHTML += `<p>${minutes}<span>M</span></p>`;
     document.getElementById("countdown").innerHTML += `<p>${seconds}<span>S</span></p>`;
+}
 
-    if (distance < 0) {
-        clearInterval(countdown);
-        document.getElementById("countdown").innerHTML ="Le countdown est terminé !";
-    }
-}, 1000);
+setInterval(refreshCountdown, 1000);
+refreshCountdown();
