@@ -55,16 +55,10 @@ section {
     opacity: 0.5;
 }
 
-.title img:nth-child(1) {
-    margin-right: auto;
-    width: 60vw;
-    max-width: 500px;
-}
-
-.title img:nth-child(2) {
-    margin-left: auto;
-    width: 60vw;
-    max-width: 500px;
+.title img {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 770px;
 }
 
 .btn-notification {
@@ -133,7 +127,9 @@ section {
 
 @media screen and (max-width: 340px) {
     #countdown {
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         gap: 16px;
+        margin-bottom: 32px;
     }
 }
