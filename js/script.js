@@ -1,5 +1,5 @@
 // modifier heure si nécessaire
-const endDate = new Date("2024-03-22T19:00:00").getTime();
+const endDate = new Date("2024-03-24T09:00:00").getTime();
 
 const refreshCountdown = () => {
     const now = new Date().getTime();
